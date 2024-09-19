@@ -18,7 +18,6 @@ A ferramenta foi projetada para **uso pessoal** e para ajudar colegas a realizar
 - **HTML5**: Estrutura do site.
 - **CSS3**: Estilos e design responsivo.
 - **JavaScript**: Lógica de cálculo e interatividade da página.
-- **GitHub Pages**: Hospedagem do site.
 
 ## Como Usar
 
