@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Redireciona /admin para /admin.php
+RewriteRule ^admin/?$ admin.php [L]
+
+# Opcional: Redireciona /login para /login.php
+RewriteRule ^login/?$ login.php [L]
+
+# Opcional: Redireciona /logout para /logout.php
+RewriteRule ^logout/?$ logout.php [L]

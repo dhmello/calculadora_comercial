@@ -1,0 +1,257 @@
+/* Estilo Geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.admin-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.admin-button:hover {
+    background-color: #0056b3;
+}
+
+.card {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #00000;
+    padding: 10px 15px;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th, .admin-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.admin-table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.admin-table td {
+    background-color: #f9f9f9;
+}
+
+.save-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para a Tela de Login e Alterar Senha */
+.admin-body {
+    background-color: #343a40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container, .alterar-senha-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h2, .alterar-senha-card h2 {
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.login-card .form-group label, .alterar-senha-card .form-group label {
+    font-weight: bold;
+    color: #343a40;
+}
+
+.login-card .form-group input, .alterar-senha-card .form-group input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-card button, .alterar-senha-card button {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-card button:hover, .alterar-senha-card button:hover {
+    background-color: #0056b3;
+}
+
+.alert {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+    .admin-container {
+        padding: 10px;
+    }
+
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .admin-button {
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+
+    .login-container, .alterar-senha-container {
+        max-width: 100%;
+        margin: 20px;
+    }
+}
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+.add-condition-form {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.add-condition-form input[type="text"],
+.add-condition-form input[type="number"] {
+    width: auto;
+    flex-grow: 1;
+}
+
+.add-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.add-button i {
+    margin-right: 5px;
+}
+
+.add-button:hover {
+    background-color: #218838;
+}
+/* Estilo para o botão "Salvar Todas" */
+.save-all-button {
+    background-color: #28a745; /* Cor verde */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    display: block; /* Para ocupar toda a largura do container */
+    width: 100%;
+}
+
+.save-all-button:hover {
+    background-color: #218838; /* Cor verde mais escura ao passar o mouse */
+}
+
+/* Estilo para modo escuro */
+.dark-mode .save-all-button {
+    background-color: #218838;
+    color: white;
+}
+
+.dark-mode .save-all-button:hover {
+    background-color: #1e7e34;
+}
+/* Estilo para o alerta de sucesso */
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
