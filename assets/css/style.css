@@ -1,0 +1,401 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Globais (Modo Claro) */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    transition: background-color 0.3s, color 0.3s, background-image 0.3s;
+    background-image: url('/assets/img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Deixa o background fixo */
+}
+
+/* Estilos para Modo Escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s, background-image 0.3s;
+    background-image: url('/assets/img/background_dark.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Deixa o background fixo */
+}
+
+
+.dark-mode .table td,
+.dark-mode .table-striped tbody tr:nth-of-type(odd),
+.dark-mode .card,
+.dark-mode .card-header,
+.dark-mode .table th,
+.dark-mode .admin-button,
+.dark-mode #usuarios-online-container,
+.dark-mode .switch-container label {
+    color: #e0e0e0;
+    background-color: #1e1e1e;
+    border-color: #444;
+}
+
+.dark-mode .card-header {
+    background-color: #2a2a2a;
+    border-bottom-color: #444;
+}
+
+.dark-mode .admin-button:hover {
+    background-color: #555;
+}
+
+.dark-mode .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Container Principal */
+.container {
+    margin: 10 auto;
+    margin-top: 20px;
+}
+
+/* Botão de Admin */
+.admin-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+    position: fixed;
+    z-index: 1000;
+    margin-top: 32px;
+    right: 10px;
+}
+
+.admin-button:hover {
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+}
+
+/* Switch de Modo Escuro */
+.switch-container {
+    display: flex;
+    align-items: center;
+
+    position: fixed;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.switch-container label {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #007bff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Estilos de Cards */
+.card {
+    background-color: white;
+    border: 10px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card-header {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+/* Tabelas */
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.table th:nth-child(2), .table td:nth-child(2) {
+    width: 25%; /* Aumenta a largura da coluna "Valor Total" */
+}
+
+.table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos Específicos para Modo Escuro */
+.dark-mode .table th {
+    background-color: #343a40;
+}
+
+/* Contador de Usuários Online */
+#usuarios-online-container {
+    background-color: #007bff;
+    display: inline-block;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease-in-out;
+}
+
+#usuarios-online-container p {
+    margin: 0;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#usuarios-online-container i {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Tela de Login */
+.login-container, .change-password-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-card, .change-password-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-card h2, .change-password-card h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.login-card .form-control, .change-password-card .form-control {
+    margin-bottom: 15px;
+}
+
+.login-card .btn, .change-password-card .btn {
+    width: 100%;
+}
+
+/* Botão Adicionar Nova Condição */
+.add-btn {
+    display: inline-block;
+    color: #fff;
+    background-color: #28a745;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.add-btn i {
+    font-size: 16px;
+}
+
+.add-btn:hover {
+    background-color: #218838;
+}
+
+/* Tooltip */
+.tooltip-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    margin-left: 5px;
+}
+
+.tooltip-icon::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 12px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.tooltip-icon:hover::after,
+.tooltip-icon:focus::after {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Tooltip no Modo Escuro */
+body.dark-mode .tooltip-icon {
+    background-color: #ffc107;
+    color: #333;
+}
+
+body.dark-mode .tooltip-icon::after {
+    background-color: #eee;
+    color: #333;
+}
+/* Estilo padrão (tema claro) */
+ul.nav.nav-tabs {
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+}
+
+ul.nav.nav-tabs .nav-item {
+    margin-right: 10px;
+}
+
+ul.nav.nav-tabs .nav-link {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px 5px 0 0;
+    padding: 10px 15px;
+    color: #007bff;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+ul.nav.nav-tabs .nav-link.active {
+    background-color: #ffffff;
+    border-bottom: 2px solid #007bff;
+    color: #007bff;
+}
+
+ul.nav.nav-tabs .nav-link:hover {
+    background-color: #e9ecef;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 767px) {
+    ul.nav.nav-tabs .nav-link {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+}
+
+/* Tema escuro (ativado pela classe .dark-mode) */
+.dark-mode ul.nav.nav-tabs {
+    border-bottom: 2px solid #444;
+}
+
+.dark-mode ul.nav.nav-tabs .nav-link {
+    background-color: #343a40;
+    border: 1px solid #444;
+    color: #ffffff;
+}
+
+.dark-mode ul.nav.nav-tabs .nav-link.active {
+    background-color: #212529;
+    border-bottom: 2px solid #00bc8c;
+    color: #00bc8c;
+}
+
+.dark-mode ul.nav.nav-tabs .nav-link:hover {
+    background-color: #495057;
+    color: #00bc8c;
+}
+
+/* Responsividade para tema escuro */
+@media (max-width: 767px) {
+    .dark-mode ul.nav.nav-tabs .nav-link {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+}
